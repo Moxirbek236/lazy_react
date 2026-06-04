@@ -12,8 +12,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
 
   const login = useCallback((username: string, password: string) => {
-    // Demo auth — any non-empty credentials work
-    if (username.trim() && password.trim()) {
+    // Hardcoded default credentials
+    if (username === 'admin' && password === '12345') {
       setIsAuthenticated(true)
       return true
     }
